@@ -1,0 +1,20 @@
+@import "../../assets/breakPoints.scss";
+a {
+  text-decoration: none;
+  button {
+    width: fit-content;
+    background-color: var(--dark-color);
+    border-radius: 15px;
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    font-family: "800";
+    color: var(--light-color);
+    @include breakPoints(mobile) {
+      font-size: 1em;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../assets/breakPoints.scss";
+
+.Menu {
+  width: 100%;
+  padding: 3em 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-family: "arabic";
+      font-size: 5em;
+      margin-bottom: 0;
+      @include breakPoints(mobile) {
+        font-size: 3em;
+        margin-bottom: 1em;
+      }
+      @include breakPoints(small) {
+        font-size: 3em;
+        margin-bottom: 1em;
+      }
+    }
+    section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        color: var(--red-color);
+        font-family: "800";
+        border-bottom: 3px solid var(--dark-color);
+        margin-bottom: 1em;
+      }
+      ol {
+        li {
+          width: 100%;
+          list-style-type: decimal;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0.3em 0;
+          p {
+            width: 20em;
+            font-family: "600";
+            font-size: 1.2em;
+            @include breakPoints(mobile) {
+              font-size: 1em;
+              width: max-content;
+            }
+          }
+          hr {
+            width: 30vw;
+            border: 1px dotted black;
+            @include breakPoints(mobile) {
+              display: none;
+            }
+          }
+          .b-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            @include breakPoints(mobile) {
+              width: 50%;
+              justify-content: space-between;
+            }
+          }
+          b {
+            width: 5em;
+            color: var(--red-color);
+            font-size: 1.2em;
+            text-align: left;
+            @include breakPoints(mobile) {
+              font-size: 0.8em;
+              width: max-content;
+              font-family: "800";
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../assets/breakPoints.scss";
+.title {
+  width: 100%;
+  font-size: 2em;
+  color: var(--red-color);
+  text-align: center;
+  font-family: "800";
+  margin-bottom: 1.5em;
+  @include breakPoints(mobile) {
+    font-size: 1.3em;
+  }
+}

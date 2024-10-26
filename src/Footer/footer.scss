@@ -1,0 +1,128 @@
+@import "../assets/breakPoints.scss";
+footer {
+  width: 100%;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 3em 0;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    @include breakPoints(mobile) {
+      flex-direction: column;
+    }
+    .logo-wrapper {
+      width: calc(100% / 3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include breakPoints(mobile) {
+        width: 100%;
+        border-bottom: 1px solid var(--light-color);
+        margin-bottom: 1em;
+      }
+      img {
+        width: 10em;
+        @include breakPoints(mobile) {
+          width: 5em;
+        }
+        @include breakPoints(small) {
+          width: 7em;
+        }
+      }
+      .s-m {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        a {
+          color: var(--light-color);
+          text-decoration: none;
+          font-size: 1.5em;
+          margin: 0.5em;
+          &:hover {
+            color: var(--yellow-color);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    ul {
+      width: calc(100% / 3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include breakPoints(mobile) {
+        width: 100%;
+        border-bottom: 1px solid var(--light-color);
+        margin-bottom: 1em;
+        padding: 0.5em 0;
+      }
+      li {
+        font-family: "600";
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: var(--light-color);
+          &:hover {
+            color: var(--yellow-color);
+            cursor: pointer;
+          }
+        }
+        &:hover {
+          color: var(--red-color);
+        }
+      }
+    }
+    .contact-no {
+      width: calc(100% / 3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      @include breakPoints(mobile) {
+        width: 100%;
+        border-bottom: 1px solid var(--light-color);
+        margin-bottom: 1em;
+        padding: 0.5em 0;
+      }
+      p {
+        color: var(--yellow-color);
+        font-family: "800";
+      }
+      b {
+        display: block;
+        color: var(--light-color);
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .copy-rights {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3em auto 0;
+    font-size: 1.2em;
+    @include breakPoints(mobile) {
+      width: 100%;
+      flex-direction: column;
+      font-size: 1em;
+    }
+    @include breakPoints(small) {
+      width: 90%;
+    }
+    p:nth-of-type(2) {
+      color: var(--red-color);
+      a {
+        color: var(--light-color);
+        text-decoration: none;
+        &:hover {
+          color: var(--yellow-color);
+        }
+      }
+    }
+  }
+}

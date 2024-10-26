@@ -1,0 +1,103 @@
+@import "../assets/breakPoints.scss";
+.small-container {
+  width: 100vw;
+  overflow: hidden;
+
+  .img-wrapper {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    @include breakPoints(mobile) {
+      animation: moving1 10s linear infinite alternate-reverse;
+      overflow: visible;
+    }
+    @include breakPoints(small) {
+      animation: moving2 10s linear infinite alternate-reverse;
+      overflow: visible;
+    }
+
+    img {
+      width: calc(100% / 10);
+      height: 6.4em;
+      object-fit: cover;
+      flex-shrink: 0;
+      &:hover {
+        animation-name: shake-bottom;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation: shake-bottom 1s linear 0s 1 normal none;
+      }
+
+      @include breakPoints(mobile) {
+        width: auto;
+        height: 10vh;
+        animation: none;
+      }
+      @include breakPoints(small) {
+        width: auto;
+        height: 10vh;
+        animation: none;
+      }
+    }
+  }
+}
+
+@keyframes moving1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(160%);
+  }
+}
+@keyframes moving2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(122%);
+  }
+}
+
+// ___________________________
+@keyframes shake-bottom {
+  0% {
+  }
+  10% {
+  }
+  20% {
+    transform: rotate(-4deg);
+  }
+  30% {
+    transform: rotate(4deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+}

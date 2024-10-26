@@ -1,0 +1,97 @@
+@import "../../assets/breakPoints.scss";
+.contact-wrapper {
+  width: 100%;
+  margin: 3em 0;
+  .container {
+    position: relative;
+    .title {
+      color: var(--light-color);
+      position: absolute;
+      top: 20%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      font-family: "arabic";
+      font-size: 5em;
+      @include breakPoints(mobile) {
+        top: 5%;
+        font-size: 2em;
+      }
+      @include breakPoints(small) {
+        top: 8%;
+        font-size: 2.5em;
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 2em;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      @include breakPoints(mobile) {
+        flex-direction: column;
+      }
+      @include breakPoints(small) {
+        flex-direction: column;
+      }
+      gap: 3em;
+      iframe {
+        width: 50%;
+        border: 0;
+        border-radius: 15px;
+        @include breakPoints(mobile) {
+          width: 100%;
+          height: 25vh;
+        }
+        @include breakPoints(small) {
+          width: 100%;
+          height: 25vh;
+        }
+      }
+      form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+        @include breakPoints(small) {
+          width: 100%;
+        }
+        input,
+        textarea {
+          border: none;
+          background-color: #f1f1f1;
+          margin: 0.5em;
+          padding: 1em;
+          border-radius: 15px;
+          resize: none;
+          outline: none;
+          &:focus {
+            outline: 1px solid red;
+          }
+        }
+
+        .name {
+          width: 100%;
+          input {
+            width: calc(100% / 2 - 0.7em);
+            margin: 0.5em 0.3em;
+          }
+        }
+        button {
+          margin-top: 1em;
+          width: 50%;
+          background-color: var(--red-color);
+          border-radius: 30px;
+          font-family: "800";
+          &:hover {
+            background-color: var(--dark-color);
+          }
+        }
+      }
+    }
+  }
+}

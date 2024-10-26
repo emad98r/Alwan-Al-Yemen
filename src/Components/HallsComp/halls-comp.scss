@@ -1,0 +1,46 @@
+@import "../../assets/breakPoints.scss";
+.halls-comp {
+  margin-bottom: 3em;
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  @include breakPoints(mobile) {
+    flex-direction: column;
+  }
+  img {
+    width: 50%;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1em;
+    @include breakPoints(mobile) {
+      width: 100%;
+    }
+  }
+  .halls-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include breakPoints(mobile) {
+      width: 100%;
+    }
+    h3 {
+      font-family: "800";
+      text-align: right;
+      color: var(--red-color);
+      font-size: 1em;
+      padding-right: 1em;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 0.8em;
+      font-family: "600";
+      color: var(--dark-color);
+      padding: 1em;
+    }
+  }
+}
